@@ -1,5 +1,7 @@
 import Title from "./Title"
 import { servicesData } from "../Js/data"
+import "../Css/Services.css"
+
 
 const Services = () => {
   return (

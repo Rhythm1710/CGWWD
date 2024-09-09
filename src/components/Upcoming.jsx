@@ -1,6 +1,7 @@
 import Title from "./Title"
 import { upcomingList } from "../Js/data"
 import { useEffect } from "react"
+import "../Css/Upcoming.css"
 
 const Upcoming = () => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const Upcoming = () => {
       <Title title="Upcoming events" />
       <div className="section-center upcoming-center">
         {upcomingList.map((event) => {
-          const { id, img, title, cost, month, date, time, location } = event
+          const { id, img, title, cost, month, date, time, location, link } = event
           return (
             <div
               className="event"
@@ -50,7 +51,12 @@ const Upcoming = () => {
                   <h4 className="event-time">{time}</h4>
                   <h4 className="event-location">{location}</h4>
                 </div>
-                <div className="register-btn btn">Register</div>
+                <a
+                  href={link}
+                  className="register-btn btn"
+                >
+                  Register
+                </a>
               </div>
             </div>
           )

@@ -1,5 +1,7 @@
 import { socialLinks } from "../Js/data"
 import { useEffect } from "react"
+import "../Css/Footer.css"
+
 
 const Footer = () => {
   useEffect(() => {

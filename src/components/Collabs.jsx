@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Hammer from "hammerjs"
 import { imageList } from "../Js/data"
+import "../Css/Collabs.css"
 
 const Collabs = () => {
   const images = imageList
@@ -35,37 +36,41 @@ const Collabs = () => {
     <div className="collab">
       <div className="section-center collab-heading">
         <article className="collab-info">
-          <h1>Our Collabs</h1>
+          <h2>Collaborations</h2>
+          <div className="underline"></div>
         </article>
-      <div className="carousel">
-        <div className="list">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={
-                index === currentIndex
-                  ? "act"
-                  : index === (currentIndex + 1) % images.length
-                  ? "next"
-                  : index === (currentIndex - 1 + images.length) % images.length
-                  ? "prev"
-                  : index === (currentIndex + 2) % images.length
-                  ? "new-next"
-                  : "hide"
-              }
-              onClick={() => {
-                if (index === currentIndex - 1) prev()
-                else if (index === currentIndex + 1) next()
-              }}
-            >
-              <img
-                src={image}
-                alt=""
-              />
-            </div>
-          ))}
+        <div className="carousel">
+          <div className="list">
+            {images.map((item, index) => (
+              <div
+                key={index}
+                className={
+                  index === currentIndex
+                    ? "act"
+                    : index === (currentIndex + 1) % images.length
+                    ? "next"
+                    : index ===
+                      (currentIndex - 1 + images.length) % images.length
+                    ? "prev"
+                    : index === (currentIndex + 2) % images.length
+                    ? "new-next"
+                    : "hide"
+                }
+                onClick={() => {
+                  if (index === currentIndex - 1) prev()
+                  else if (index === currentIndex + 1) next()
+                }}
+              >
+                <a href={item.link}>
+                  <img
+                    src={item.image}
+                    alt=""
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </div>
   )

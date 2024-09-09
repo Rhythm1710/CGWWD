@@ -1,0 +1,117 @@
+/*
+=============== 
+About Team Page
+===============
+*/
+.about-team-heading h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.about-team-heading .underline {
+  width: 8rem;
+  margin-bottom: 5rem;
+}
+.about-team {
+  background: var(--clr-primary-10);
+}
+.about-team-title {
+  margin-bottom: 2rem;
+}
+.about-team-title h2 {
+  font-size: 2rem;
+}
+.about-team-item {
+  display: grid;
+  gap: 3rem 2rem;
+  margin-bottom: 4rem;
+  min-height: 25rem;
+  max-width: 1240px;
+  place-items: center;
+}
+.about-team-img img {
+  width: 15rem;
+  height: 15rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.about-team-info p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 300px) {
+  .about-team-heading h2 {
+    font-size: 3rem;
+  }
+  .about-team-img img {
+    width: 17rem;
+    height: 17rem;
+  }
+  .about-team-title h2 {
+    font-size: 2rem;
+  }
+  .about-team-info p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .about-team-img img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .about-team-title h2 {
+    font-size: 2.5rem;
+  }
+  .about-team-info p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .about-team-info p {
+    font-size: 1rem;
+  }
+  .about-team-img img {
+    width: 22rem;
+    height: 22rem;
+  }
+  .about-team-heading h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-team-title {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .about-team-image {
+    max-width: 22rem;
+    max-height: 22rem;
+  }
+  .about-team-title .underline {
+    margin-left: 0;
+  }
+  .about-team-item {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-team-image::before {
+    left: -2rem;
+  }
+  .about-team-info {
+    align-self: center;
+  }
+  /* .about-team-item:nth-child(odd) {
+    direction: rtl;
+  } */
+  .about-team-item:nth-child(odd) .about-team-title {
+    text-align: left;
+  }
+  .about-team-item:nth-child(odd) p {
+    text-align: left;
+  }
+  .about-team-item:nth-child(even) p {
+    text-align: left;
+  }
+  .about-team-item:nth-child(odd) .underline {
+    margin-right: 0;
+  }
+}

@@ -1,20 +1,17 @@
-import { Link, NavLink } from "react-router-dom"
-import logo from "../assets/images/website-removebg-preview.png"
+import { NavLink } from "react-router-dom"
 import { navLinks } from "../Js/data"
 import { useEffect } from "react"
+import "../Css/Navbar.css"
 
 const Navbar = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector("#nav")
-      const hero = document.querySelector(".hero")
+    const navbar = document.querySelector("#nav")
 
+    const handleScroll = () => {
       if (window.scrollY > 0) {
         navbar.classList.add("navbar-fixed")
-        hero.style.height = "100vh"
       } else {
         navbar.classList.remove("navbar-fixed")
-        hero.style.height = "100vh"
       }
     }
     window.addEventListener("scroll", handleScroll)
@@ -29,13 +26,18 @@ const Navbar = () => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          <img
-            src={logo}
-            height="50"
-            width="50"
-            className="nav-logo"
-            alt="nav logo"
-          />
+          <NavLink
+            to="/"
+            className="nav-logo-link"
+          >
+            <img
+              src="https://res.cloudinary.com/dbfrbezmp/image/upload/v1725813550/CGWWD/main_logo.png"
+              height="50"
+              width="50"
+              className="nav-logo"
+              alt="nav logo"
+            />
+          </NavLink>
           <button
             className="nav-btn"
             id="nav-btn"
@@ -48,7 +50,12 @@ const Navbar = () => {
             const { id, href, name } = link
             return (
               <li key={id}>
-                <NavLink to={href} className={`custom-links`}>{name}</NavLink>
+                <NavLink
+                  to={href}
+                  className={`custom-links`}
+                >
+                  {name}
+                </NavLink>
               </li>
             )
           })}

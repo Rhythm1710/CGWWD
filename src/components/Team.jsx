@@ -1,5 +1,8 @@
 import Title from "./Title"
 import { aboutTeam } from "../Js/data"
+import "../Css/Team.css"
+
+
 
 const Team = () => {
   return (

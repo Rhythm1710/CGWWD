@@ -1,5 +1,8 @@
 import { useEffect } from "react"
 import { socialLinks, navLinks } from "../Js/data"
+import "../Css/Sidebar.css"
+
+
 
 const Sidebar = () => {
   useEffect(() => {
