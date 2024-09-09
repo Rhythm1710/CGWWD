@@ -13,10 +13,10 @@ function Home() {
       <Navbar />
       <Sidebar />
       <Hero />
+      <Upcoming />
       <Collabs />
       <About />
       <Services />
-      <Upcoming />
       <Footer />
     </>
   )

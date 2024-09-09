@@ -10,13 +10,12 @@ Upcoming Events
   width: 4rem;
 }
 .event {
-  flex: 0 0 auto; 
-  /* height: 16.5rem;
-  width: 18rem; */
+  flex: 0 0 auto;
   position: relative;
   background: var(--clr-primary-10);
   border-radius: 1.5rem;
   box-shadow: var(--dark-shadow);
+  overflow: hidden;
 }
 .event-image {
   width: auto;
