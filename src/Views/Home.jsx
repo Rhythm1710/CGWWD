@@ -1,6 +1,6 @@
 import About from "../components/About"
 import Sidebar from "../components/Sidebar"
-import Navbar from "../components/navbar"
+import Navbar from "../components/Navbar"
 import Collabs from "../components/Collabs"
 import Services from "../components/Services"
 import Upcoming from "../components/Upcoming"
