@@ -6,10 +6,12 @@ import Services from "../components/Services"
 import Upcoming from "../components/Upcoming"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
+import ScrollPreservation from "../components/ScrollPreservation"
+
 
 function Home() {
   return (
-    <>
+    <ScrollPreservation>
       <Navbar />
       <Sidebar />
       <Hero />
@@ -18,7 +20,7 @@ function Home() {
       <About />
       <Services />
       <Footer />
-    </>
+    </ScrollPreservation>
   )
 }
 

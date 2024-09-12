@@ -18,23 +18,23 @@ Mentions Page
 .mentions-page-center {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 3rem 3rem;
+  gap: 1rem 1rem;
   justify-items: center;
   align-items: center;
 }
 .mention-img {
   background: transparent;
   border-radius: 100%;
-  height: 10rem;
-  width: 10rem;
+  height: 5rem;
+  width: 5rem;
   transition: var(--transition);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.mention-img img{
+.mention-img img {
   border-radius: 100%;
   /* border: 2px solid var(--clr-primary-1); */
 }
-.single-mention:hover .mention-img{
+.single-mention:hover .mention-img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
@@ -46,10 +46,10 @@ Mentions Page
   flex-direction: column;
   align-items: center;
 }
-.single-mention h3{
+.single-mention h3 {
   margin-top: 1.4rem;
   letter-spacing: normal;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--clr-primary-1);
   font-weight: normal;
   transition: var(--transition);
@@ -61,7 +61,7 @@ Mentions Page
     width: 18rem;
   }
   .mention-img {
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
   }
 }

@@ -19,6 +19,7 @@ const App = () => {
 
     return () => clearTimeout(timer)
   }, [pathname])
+  
 
   return (
     <>

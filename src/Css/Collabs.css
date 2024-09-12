@@ -14,6 +14,8 @@ Collabs
   text-align: center;
   margin-top: 0;
   padding-top: 3rem;
+  font-size: 1.6rem;
+
 }
 .collab-info .underline{
   width: 7rem;
@@ -120,5 +122,10 @@ Collabs
   .list div {
     width: 22rem;
     height: 22rem;
+  }
+}
+@media screen and (min-width: 228px) {
+  .collab-info h2{
+    font-size: 2rem;
   }
 }

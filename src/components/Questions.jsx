@@ -5,18 +5,30 @@ import "../Css/Questions.css"
 const Questions = () => {
   useEffect(() => {
     const items = document.querySelectorAll(".accordion button")
+    const savedState = JSON.parse(localStorage.getItem("accordionState")) || {}
 
     function toggleAccordion() {
+      const currentItemId = this.getAttribute("data-id")
       const itemToggle = this.getAttribute("aria-expanded")
 
-      items.forEach((item) => item.setAttribute("aria-expanded", "false"))
+      items.forEach((item) => {
+        item.setAttribute("aria-expanded", "false")
+        const itemId = item.getAttribute("data-id")
+        savedState[itemId] = false
+      })
 
       if (itemToggle === "false") {
         this.setAttribute("aria-expanded", "true")
+        savedState[currentItemId] = true
       }
+      localStorage.setItem("accordionState", JSON.stringify(savedState))
     }
 
-    items.forEach((item) => item.addEventListener("click", toggleAccordion))
+    items.forEach((item) => {
+      const itemId = item.getAttribute("data-id")
+      item.setAttribute("aria-expanded", savedState[itemId] ? "true" : "false")
+      item.addEventListener("click", toggleAccordion)
+    })
 
     return () => {
       items.forEach((item) =>
@@ -40,7 +52,10 @@ const Questions = () => {
               className="accordion-item"
               key={id}
             >
-              <button aria-expanded="false">
+              <button
+                aria-expanded="false"
+                data-id={id}
+              >
                 <span className="accordion-title">{question}</span>
                 <span
                   className="icon"
