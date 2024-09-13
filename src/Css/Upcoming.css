@@ -29,7 +29,7 @@ Upcoming Events
   width: 100%;
   position: absolute;
   padding: 0 0.5rem 0 0.5rem;
-  top: 54%;
+  top: 55%;
   color: var(--clr-white);
   display: flex;
   flex-direction: row-reverse;
@@ -45,7 +45,7 @@ Upcoming Events
   font-size: 1.2rem;
 }
 .event-heading h3 {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 .event-details {
   /* margin-top: 1rem; */
@@ -62,7 +62,7 @@ Upcoming Events
   font-size: 1rem;
   font-weight: 100;
   letter-spacing: normal;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -94,7 +94,7 @@ Upcoming Events
   margin: 0;
   align-content: center;
   justify-items: center;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   border-radius: 0 0 1.5rem 0;
   text-align: center;
   letter-spacing: 2px;
@@ -135,5 +135,14 @@ Upcoming Events
 @media screen and (min-width: 308px) {
   .upcoming .underline {
     width: 12rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .event-cal h4 {
+    margin-bottom: 0.4rem;
+  }
+  .register-btn {
+    font-size: 1.4rem;
   }
 }
