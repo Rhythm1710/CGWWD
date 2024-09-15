@@ -5,8 +5,8 @@ Hero
 */
 .hero {
   height: 100vh;
-  background: url("./src/assets/images/CGWWD_Main Banner.jpg") center/cover
-    no-repeat scroll;
+  background: url("https://res.cloudinary.com/dbfrbezmp/image/upload/f_auto,q_auto/v1/CGWWD/Main%20Banner")
+    center/cover no-repeat scroll;
   transition: var(--transition);
 }
 
