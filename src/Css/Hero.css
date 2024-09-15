@@ -6,9 +6,10 @@ Hero
 .hero {
   height: 100vh;
   background: url("https://res.cloudinary.com/dbfrbezmp/image/upload/f_auto,q_auto/v1/CGWWD/Main%20Banner")
-    center/cover no-repeat fixed;
-  transition: var(--transition)
+    center/cover no-repeat scroll;
+  transition: var(--transition);
 }
+
 .hero-center h1 {
   margin-top: -1rem;
   font-size: 3rem;
@@ -17,4 +18,10 @@ Hero
   text-shadow: -1px 0 var(--clr-primary-1), 0 1px var(--clr-primary-1),
     1px 0 var(--clr-primary-1), 0 -1px var(--clr-primary-1);
   /* border: 2px solid var(--cl) ; */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-attachment: fixed; /* Only apply 'fixed' on larger screens */
+  }
 }
