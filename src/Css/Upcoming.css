@@ -37,9 +37,6 @@ Upcoming Events
   justify-content: space-between;
   text-shadow: -0.5px 0 var(--clr-primary-1), 0 0.5px var(--clr-primary-1),
     0.5px 0 var(--clr-primary-1), 0 -0.5px var(--clr-primary-1);
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  /* backdrop-filter: blur(5px); 
- clip-path: text(80% 80%); */
 }
 .event-heading h4 {
   font-size: 1.2rem;
@@ -48,7 +45,6 @@ Upcoming Events
     font-size: 1.4rem;
 }
 .event-details {
-  /* margin-top: 1rem; */
   position: relative;
   place-items: center;
   display: grid;
@@ -108,13 +104,67 @@ Upcoming Events
 .upcoming-center::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 500px) {
+  .event {
+    height: 22rem;
+    width: 17rem;
+    border-radius: 1rem;
+  }
+  .event-image {
+    height: 60%;
+  }
+  .event-image img {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .event-heading{
+    top: 51%;
+  }
+  .event-details {
+    padding-top: 0.3rem;
+    display: grid;
+    grid-template-columns: 0fr 4fr;
+    row-gap: 0; 
+  }
+  .register-btn {
+    margin-top: 0;
+    grid-column: span 7;
+    max-height: 50px;
+    width: 110%;
+    font-size: 1.2rem;
+    border-radius: 0 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 308px) {
+  .upcoming .underline {
+    width: 12rem;
+  }
+}
+
+@media screen and (min-width: 501px) {
+  .event-cal h4 {
+    margin-bottom: 0.4rem;
+  }
+  .event-heading{
+    top: 53%;
+  }
+  .register-btn {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .event {
     height: 22rem;
     width: 26rem;
   }
+  .event-heading{
+    top: 54%;
+  }
   .event-cal h2 {
     font-size: 3rem;
+    padding-bottom: 1rem;
   }
   .event-cal h4 {
     font-size: 1.2rem;
@@ -125,24 +175,10 @@ Upcoming Events
   .event-heading h3 {
     font-size: 1.55rem;
   }
-}
-@media screen and (min-width: 500px) {
-  /* .event{
-    height: 15rem;
-    width: 17.727rem;
-  } */
-}
-@media screen and (min-width: 308px) {
-  .upcoming .underline {
-    width: 12rem;
-  }
-}
-
-@media screen and (min-width: 426px) {
-  .event-cal h4 {
-    margin-bottom: 0.4rem;
-  }
   .register-btn {
-    font-size: 1.4rem;
+    padding-bottom: 1rem;
   }
+  .event-loc{
+    padding-bottom: 1rem;
+}
 }
