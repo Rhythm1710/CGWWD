@@ -10,8 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Create Pull Request
     steps:
-      - name: git-checkout
+      - name: Git checkout
         uses: actions/checkout@v3
+
+      - name: Pull latest from main
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull origin main
 
       - name: Install all dependencies
         run: npm install
@@ -34,5 +40,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: temp-branch # The branch where the assets were pushed
           base: build # The target branch for the PR
-          title: "Build: $(date +'%Y-%m-%d')"
+          title: "Build: ${{ github.event.head_commit.message }}"
           body: "This pull request contains the latest build artifacts."
