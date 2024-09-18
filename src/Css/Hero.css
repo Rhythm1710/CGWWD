@@ -19,9 +19,3 @@ Hero
     1px 0 var(--clr-primary-1), 0 -1px var(--clr-primary-1);
   /* border: 2px solid var(--cl) ; */
 }
-
-/* @media (min-width: 1000px) {
-  .hero {
-    background-attachment: fixed;
-  }
-} */
