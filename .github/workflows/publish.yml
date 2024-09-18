@@ -23,7 +23,7 @@ jobs:
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: build-branch # Push to a temporary branch
+          BRANCH: temp-branch # Push to a temporary branch
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
@@ -32,7 +32,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: build-branch # The branch where the assets were pushed
+          branch: temp-branch # The branch where the assets were pushed
           base: build # The target branch for the PR
           title: "Build: $(date +'%Y-%m-%d')"
           body: "This pull request contains the latest build artifacts."
