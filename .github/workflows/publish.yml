@@ -17,27 +17,31 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build # The build command of your project
+        run: npm run build # This command will generate the dist folder
 
+      # Step to push only the dist folder to the temporary branch (temp-branch)
       - name: Push dist folder to a temporary branch
         uses: s0/git-publish-subdir-action@develop
         with:
-          branch: temp-branch # Temporary branch where the dist folder will be pushed
+          branch: temp-branch # Temporary branch to hold dist files
         env:
           REPO: self
           BRANCH: temp-branch
-          FOLDER: dist # This is the folder where the build files are located
+          FOLDER: dist # Push only the dist folder
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
 
-      - name: Wait for Git to sync
-        run: sleep 10s # Ensure Git registers the push before creating a PR
+      # Wait to ensure the push is successful
+      - name: Wait for git sync
+        run: sleep 10s
 
+      # Step to create a Pull Request from temp-branch to build branch
       - name: Create Pull Request from temp-branch to build
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: temp-branch # Source branch for the PR (temp-branch where dist was pushed)
-          base: build # Target branch for the PR (where you want to merge the build files)
+          branch: temp-branch # The source branch with the dist folder
+          base: build # Target branch where the PR will be created (build)
           title: "Build: ${{ github.event.head_commit.message }}"
-          body: "This pull request contains the latest build artifacts."
+          body: "This pull request contains the latest build artifacts from the dist folder."
+          create-draft: false # Set to true if you want a draft PR
