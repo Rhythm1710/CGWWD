@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build and Create Pull Request
+    name: Build and Push Dist Files
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
@@ -19,29 +19,25 @@ jobs:
       - name: Build the project
         run: npm run build # This command will generate the dist folder
 
-      # Step to push only the dist folder to the temporary branch (temp-branch)
-      - name: Push dist folder to a temporary branch
-        uses: s0/git-publish-subdir-action@develop
-        with:
-          branch: temp-branch # Temporary branch to hold dist files
-        env:
-          REPO: self
-          BRANCH: temp-branch
-          FOLDER: dist # Push only the dist folder
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Build: ({sha}) {msg}"
+      - name: Set up Git for pushing
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
 
-      # Wait to ensure the push is successful
-      - name: Wait for git sync
-        run: sleep 10s
+      - name: Checkout the build branch
+        run: git checkout build
 
-      # Step to create a Pull Request from temp-branch to build branch
-      - name: Create Pull Request from temp-branch to build
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: temp-branch # The source branch with the dist folder
-          base: build # Target branch where the PR will be created (build)
-          title: "Build: ${{ github.event.head_commit.message }}"
-          body: "This pull request contains the latest build artifacts from the dist folder."
-          create-draft: false # Set to true if you want a draft PR
+      - name: Remove existing dist files from build branch
+        run: |
+          git rm -r * # Remove all files in the build branch
+          git clean -fd # Clean untracked files
+
+      - name: Copy dist files to build branch
+        run: |
+          cp -R dist/* . # Copy dist files to the root of the build branch
+
+      - name: Commit and push dist files
+        run: |
+          git add .
+          git commit -m "Deploy dist files"
+          git push origin build
