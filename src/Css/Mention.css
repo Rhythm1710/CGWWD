@@ -17,7 +17,7 @@ Mentions Page
 }
 .mentions-page-center {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem 1rem;
   justify-items: center;
   align-items: center;
@@ -45,6 +45,7 @@ Mentions Page
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .single-mention h3 {
   margin-top: 1.4rem;
@@ -56,12 +57,15 @@ Mentions Page
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
   .mentions-hero .section-title .underline {
     width: 18rem;
   }
   .mention-img {
     height: 10rem;
     width: 10rem;
+  }
+  .mentions-page-center {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }

@@ -5,5 +5,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Otherwise, redirect all requests to index.html in the root directory
-RewriteRule ^ ../index.html [L]
+# Otherwise, redirect all requests to index.html
+RewriteRule ^ index.html [L]
