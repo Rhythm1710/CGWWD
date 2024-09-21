@@ -1,4 +1,4 @@
-name: Generate a build and create a pull request
+name: Generate a build and push to build branch
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build and Create Pull Request
+    name: Build and Push to Build Branch
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
@@ -17,31 +17,15 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build # This command will generate the dist folder
+        run: npm run build 
 
-      # Step to push only the dist folder to the temporary branch (temp-branch)
-      - name: Push dist folder to a temporary branch
+      - name: Push dist folder to build branch
         uses: s0/git-publish-subdir-action@develop
         with:
-          branch: temp-branch # Temporary branch to hold dist files
+          branch: build
         env:
           REPO: self
-          BRANCH: temp-branch
-          FOLDER: dist # Push only the dist folder
+          BRANCH: build
+          FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
-
-      # Wait to ensure the push is successful
-      - name: Wait for git sync
-        run: sleep 10s
-
-      # Step to create a Pull Request from temp-branch to build branch
-      - name: Create Pull Request from temp-branch to build
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: temp-branch # The source branch with the dist folder
-          base: build # Target branch where the PR will be created (build)
-          title: "Build: ${{ github.event.head_commit.message }}"
-          body: "This pull request contains the latest build artifacts from the dist folder."
-          create-draft: false # Set to true if you want a draft PR
