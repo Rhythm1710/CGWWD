@@ -1,46 +1,45 @@
 name: Generate a build and create a pull request
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build and Push Dist Files
+    permissions:
+      contents: write
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch all branches to ensure we can check out the build branch
-
+          fetch-depth: 0
       - name: Install all dependencies
-        run: npm install
-
+        run: npm ci
       - name: Build the project
-        run: npm run build # This command will generate the dist folder
-
+        run: npm run build
       - name: Set up Git for pushing
         run: |
           git config --local user.name "GitHub Action"
           git config --local user.email "action@github.com"
-
       - name: Check out the build branch or create if it doesn't exist
         run: |
           git checkout build || git checkout -b build
-
-      - name: Remove existing dist files from build branch
+      - name: Remove existing files from build branch
         run: |
-          git rm -r * # Remove all files in the build branch
-          git clean -fd # Clean untracked files
-
+          git rm -rf .
+          git clean -fxd
       - name: Copy dist files to build branch
         run: |
-          cp -R dist/* . # Copy dist files to the root of the build branch
-
+          cp -R dist/* . || echo "No dist folder found"
       - name: Commit and push dist files
         run: |
           git add .
-          git commit -m "Deploy dist files"
-          git push origin build
+          git commit -m "Deploy dist files" || echo "No changes to commit"
+          git push --force origin build
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: build
+          title: "Update build artifacts"
+          body: "This PR updates the build artifacts."
