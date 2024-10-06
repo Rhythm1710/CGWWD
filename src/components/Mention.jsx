@@ -24,6 +24,7 @@ const Mention = () => {
                     <img
                       src={img}
                       alt={alt}
+                      loading="lazy"
                     />
                   </a>
                 </div>

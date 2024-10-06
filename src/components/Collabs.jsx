@@ -65,6 +65,7 @@ const Collabs = () => {
                   <img
                     src={item.image}
                     alt=""
+                    loading="lazy"
                   />
                 </a>
               </div>

@@ -31,7 +31,7 @@ const Navbar = () => {
             className="nav-logo-link"
           >
             <img
-              src="https://res.cloudinary.com/dbfrbezmp/image/upload/v1725813550/CGWWD/main_logo.png"
+              src="https://res.cloudinary.com/dbfrbezmp/image/upload/v1725813550/CGWWD/main_logo.webp"
               height="50"
               width="50"
               className="nav-logo"

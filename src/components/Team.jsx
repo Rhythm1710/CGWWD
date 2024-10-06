@@ -1,8 +1,5 @@
-import Title from "./Title"
 import { aboutTeam } from "../Js/data"
 import "../Css/Team.css"
-
-
 
 const Team = () => {
   return (
@@ -24,6 +21,7 @@ const Team = () => {
                 src={img}
                 className="about-team-image"
                 alt="about img"
+                loading="lazy"
               />
             </article>
             <article className="about-team-info">

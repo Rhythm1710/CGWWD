@@ -35,6 +35,7 @@ const Upcoming = () => {
                 <img
                   src={img}
                   alt=""
+                  loading="lazy"
                 />
               </div>
               <div className="event-heading">
