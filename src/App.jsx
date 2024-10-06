@@ -1,10 +1,11 @@
 import { Route, Routes, useLocation } from "react-router-dom"
+import { lazy, Suspense, useEffect, useState } from "react"
 import "./Css/App.css"
-import Home from "./Views/Home"
-import AboutTeam from "./Views/AboutTeam"
-import Faq from "./Views/Faq"
-import OurMentions from "./Views/OurMentions"
-import { useEffect, useState } from "react"
+
+const Home = lazy(() => import("./Views/Home"))
+const AboutTeam = lazy(() => import("./Views/AboutTeam"))
+const Faq = lazy(() => import("./Views/Faq"))
+const OurMentions = lazy(() => import("./Views/OurMentions"))
 
 const App = () => {
   const { pathname } = useLocation()
@@ -19,7 +20,6 @@ const App = () => {
 
     return () => clearTimeout(timer)
   }, [pathname])
-  
 
   return (
     <>
@@ -28,24 +28,32 @@ const App = () => {
           <div className="spinner"></div>
         </div>
       ) : (
-        <Routes>
-          <Route
-            path="/"
-            element={<Home />}
-          />
-          <Route
-            path="/about-team"
-            element={<AboutTeam />}
-          />
-          <Route
-            path="/faqs"
-            element={<Faq />}
-          />
-          <Route
-            path="/our-mentions"
-            element={<OurMentions />}
-          />
-        </Routes>
+        <Suspense
+          fallback={
+            <div className="loading-screen">
+              <div className="spinner"></div>
+            </div>
+          }
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/about-team"
+              element={<AboutTeam />}
+            />
+            <Route
+              path="/faqs"
+              element={<Faq />}
+            />
+            <Route
+              path="/our-mentions"
+              element={<OurMentions />}
+            />
+          </Routes>
+        </Suspense>
       )}
     </>
   )

@@ -47,7 +47,7 @@ export const servicesData = [
 export const imageList = [
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/Skechers-logo.png",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/Skechers-logo.webp",
     link: "https://www.instagram.com/reel/C45QXE8Iabz/?igsh=dTZlZ28zc3h1amt6",
   },
   {
@@ -67,27 +67,27 @@ export const imageList = [
   },
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555232/CGWWD/gatorade.png",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555232/CGWWD/gatorade.webp",
     link: "https://www.instagram.com/reel/C7_xEYOPehs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555534/CGWWD/sunscoop.png",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555534/CGWWD/sunscoop.webp",
     link: "https://www.instagram.com/reel/C-J0HITPgEH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725809922/CGWWD/basil.png",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725809922/CGWWD/basil.webp",
     link: "https://www.instagram.com/reel/C_aiFxrPYon/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725807470/CGWWD/indriya.jpg",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725807470/CGWWD/indriya.webp",
     link: "https://www.instagram.com/reel/C_Zxlk5vw-i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
   {
     image:
-      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725809930/CGWWD/vegas.jpg",
+      "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725809930/CGWWD/vegas.webp",
     link: "",
   },
 ]
@@ -95,7 +95,7 @@ export const imageList = [
 export const upcomingList = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/walk.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1728240398/CGWWD/walk.webp",
     title: "walk",
     cost: "free",
     month: "Sep",
@@ -106,7 +106,7 @@ export const upcomingList = [
   },
   // {
   //   id: 2,
-  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/yoga.jpg",
+  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/yoga.webp",
   //   title: "photo walk",
   //   cost: "free",
   //   month: "aug",
@@ -117,7 +117,7 @@ export const upcomingList = [
   // },
   // {
   //   id: 3,
-  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/zumba.jpg",
+  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717410363/CGWWD/zumba.webp",
   //   title: "photo walk",
   //   cost: "free",
   //   month: "aug",
@@ -128,7 +128,7 @@ export const upcomingList = [
   // },
   // {
   //   id: 4,
-  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555124/CGWWD/networking.png",
+  //   img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725555124/CGWWD/networking.webp",
   //   title: "photo walk",
   //   cost: "free",
   //   month: "aug",
@@ -144,31 +144,31 @@ export const aboutTeam = [
     id: 1,
     name: "Manisha Kalra",
     info: "Meet Manisha Kalra, the city girl who started  this journey in March 2023. Tired of spending weekends with overpriced coffee and food, she wanted to shake things up. Manisha believes there's no age limit for making friends. She's passionate about connecting like-minded women and changing the narrative that friendships are limited to school or college years.Not only does she lead our community, but Manisha also manages our social media marketing. Those fun reels on our IG page? Yep, they are made by her! With her passion for connection and creativity, Manisha keeps our online presence lively and engaging.",
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725554092/CGWWD/manisha.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725554092/CGWWD/manisha.webp",
   },
   {
     id: 2,
     name: "Amrit Kaur Sandhu",
     info: "Meet Amrit Kaur Sandhu, the newest addition to our City Girls community. At just 19 years old, Amrit brings an abundance of kindness and empathy to our team. She ensures our walks run smoothly and seamlessly, and she's the mastermind behind our amazing emails and the friendly voice behind our social media replies. With her dedication and warmth, Amrit helps us stay connected and engaged with all our members",
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725552931/CGWWD/amrit.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725552931/CGWWD/amrit.webp",
   },
   {
     id: 3,
     name: "Mahika Negi",
     info: "Meet Mahika Negi, a powerhouse of great ideas within our community. As our events manager, she ensures all the necessary arrangements are taken care of for smooth operations. You'll spot her at every event, where her presence ensures everything runs seamlessly.The magic of our events is a result of Mahika's dedication and hard work. She goes above and beyond to surpass everyone's expectations, ensuring that attendees leave feeling content and like they got their paisa vasool!",
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725552931/CGWWD/mahika.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725552931/CGWWD/mahika.webp",
   },
   {
     id: 3,
     name: "Rhythm Arora",
     info: "Meet Rhythm Arora, our talented and dedicated website designer. Though he’s just getting started in his career, he’s already made a big impact by bringing fresh ideas and a never-ending supply of updates (seriously, we lost count!). He’s handled all our requests without a single complaint, no matter how many times we’ve asked for “just one more change.” We can’t help but admire his patience and the magic he works behind the scenes!",
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/ar_16:9,c_crop,g_auto,w_3024/CGWWD/rhythm.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/ar_16:9,c_crop,g_auto,w_3024/CGWWD/rhythm.webp",
   },
   {
     id: 4,
     name: "Nikhil Arora",
     info: "Meet Nikhil, our sharp-eyed data analyst. He’s the one who dives into the numbers, helping us decode data so we can make smarter, data-driven decisions for our community. Thanks to Nikhil, we’re able to curate better, more engaging events that our community members love. He’s the reason behind the scenes that our ideas match up with the facts!",
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725558614/CGWWD/nikhil.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725558614/CGWWD/nikhil.webp",
   },
 ]
 
@@ -260,50 +260,50 @@ export const aboutData = [
 ]
 export const ourMentions = [
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725817201/CGWWD/curly_tales.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725817201/CGWWD/curly_tales.webp",
     link: "https://curlytales.com/from-gardens-to-monuments-explore-delhi-with-city-girls-who-walk-delhi-a-women-led-travel-club/amp/",
     alt: "Curly Tales",
     title: "Curly Tales",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815033/CGWWD/TOI.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815033/CGWWD/TOI.webp",
     link: "https://timesofindia.indiatimes.com/india/times-prime-celebrates-womens-day-with-impactful-initiatives/amp_articleshow/108465358.cms",
     alt: "Times of India",
     title: "Times of India",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815159/CGWWD/outlook_traveller.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815159/CGWWD/outlook_traveller.webp",
     link: "https://www.outlooktraveller.com/amp/story/experiences/heritage/this-women-led-organisation-conducts-walks-in-and-around-delhi",
     alt: "Outlook Traveller",
     title: "Outlook Traveller",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822444/CGWWD/et.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822444/CGWWD/et.webp",
     link: "https://brandequity.economictimes.indiatimes.com/amp/news/industry/empowering-women-with-impactful-initiatives-times-prime-celebrated-womens-day-in-style/108463128",
     alt: "ET Brand Equity",
     title: "ET Brand Equity",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822661/CGWWD/indian_expres.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822661/CGWWD/indian_expres.webp",
     link: "https://www.newindianexpress.com/amp/story/cities/delhi/2024/May/01/foot-notes-from-delhi",
     alt: "Indian express",
     title: "Indian express",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815212/CGWWD/patriot.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725815212/CGWWD/patriot.webp",
     link: "https://thepatriot.in/gender/no-holding-them-back-47459/amp",
     alt: "Patriot",
     title: "Patriot",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725824117/CGWWD/ht_city.png",
-    link: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717411750/CGWWD/HT%20City%20Mention.jpg",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725824117/CGWWD/ht_city.webp",
+    link: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717411750/CGWWD/HT%20City%20Mention.webp",
     alt: "HT City",
     title: "HT City",
   },
   {
-    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822855/CGWWD/morning_standard.png",
-    link: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717401080/CGWWD/The%20Morning%20Standard%20Mention.png",
+    img: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1725822855/CGWWD/morning_standard.webp",
+    link: "https://res.cloudinary.com/dbfrbezmp/image/upload/v1717401080/CGWWD/The%20Morning%20Standard%20Mention.webp",
     alt: "The Morning Standard Mention",
     title: "The Morning Standard Mention",
   },
