@@ -2,24 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>CGWWD</title>
-    <link rel="icon" type="image/svg+xml" href="./src/assets/images/main_logo.webp" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"></noscript>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/images/CGWWD_main_logo.webp"
+    />
+
+    <!-- Preload and lazy-load Google Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      />
+    </noscript>
+
     <style>
+      /* Font Face Declaration */
       @font-face {
         font-family: "Open Sans";
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2") format("woff2");
+        src: url("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2")
+          format("woff2");
       }
+
+      /* Hero Section */
       .hero {
         height: 100vh;
-        background: url("https://res.cloudinary.com/dbfrbezmp/image/upload/v1728240385/CGWWD/Main%20Banner.webp") center/cover no-repeat scroll;
+        background: url("https://res.cloudinary.com/dbfrbezmp/image/upload/v1728240385/CGWWD/Main%20Banner.webp")
+          center/cover no-repeat scroll;
         transition: all 0.2s linear;
       }
+
+      /* Centered Hero Text */
       .hero-center h1 {
         font-size: 3rem;
         text-align: center;
@@ -27,13 +55,38 @@
         text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333;
       }
     </style>
-    <link rel="preload" href="https://res.cloudinary.com/dbfrbezmp/image/upload/v1728240385/CGWWD/Main%20Banner.webp" as="image" />
-    <script src="https://kit.fontawesome.com/9da118c4b0.js" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="normalize.css" media="print" onload="this.media='all'">
-    
+
+    <!-- Preload Hero Image -->
+    <link
+      rel="preload"
+      href="https://res.cloudinary.com/dbfrbezmp/image/upload/v1728240385/CGWWD/Main%20Banner.webp"
+      as="image"
+    />
+
+    <!-- FontAwesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/9da118c4b0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- Normalize CSS for better cross-browser consistency -->
+    <link
+      rel="stylesheet"
+      href="normalize.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/Index.jsx" defer></script>
+
+    <!-- Load React Components -->
+    <script
+      type="module"
+      src="/src/Index.jsx"
+      defer
+    ></script>
   </body>
 </html>

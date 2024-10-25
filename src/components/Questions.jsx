@@ -7,20 +7,22 @@ const Questions = () => {
     const items = document.querySelectorAll(".accordion button")
     const savedState = JSON.parse(localStorage.getItem("accordionState")) || {}
 
-    function toggleAccordion() {
-      const currentItemId = this.getAttribute("data-id")
-      const itemToggle = this.getAttribute("aria-expanded")
+    function toggleAccordion(e) {
+      const currentItemId = e.currentTarget.getAttribute("data-id")
+      const itemToggle =
+        e.currentTarget.getAttribute("aria-expanded") === "true"
 
       items.forEach((item) => {
-        item.setAttribute("aria-expanded", "false")
         const itemId = item.getAttribute("data-id")
+        item.setAttribute("aria-expanded", "false")
         savedState[itemId] = false
       })
 
-      if (itemToggle === "false") {
-        this.setAttribute("aria-expanded", "true")
+      if (!itemToggle) {
+        e.currentTarget.setAttribute("aria-expanded", "true")
         savedState[currentItemId] = true
       }
+
       localStorage.setItem("accordionState", JSON.stringify(savedState))
     }
 
@@ -45,6 +47,8 @@ const Questions = () => {
           <div className="underline"></div>
         </div>
       </section>
+
+      {/* Accordion Section */}
       <section className="container">
         <div className="accordion">
           {questions.map(({ id, question, answer }) => (

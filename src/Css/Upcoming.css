@@ -39,10 +39,12 @@ Upcoming Events
     0.5px 0 var(--clr-primary-1), 0 -0.5px var(--clr-primary-1);
 }
 .event-heading h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0cap;
 }
 .event-heading h3 {
-    font-size: 1.4rem;
+  font-size: 1.2rem;
+  letter-spacing: 0cap;
 }
 .event-details {
   position: relative;
@@ -117,14 +119,14 @@ Upcoming Events
   .event-image img {
     border-radius: 1rem 1rem 0 0;
   }
-  .event-heading{
+  .event-heading {
     top: 51%;
   }
   .event-details {
     padding-top: 0.3rem;
     display: grid;
     grid-template-columns: 0fr 4fr;
-    row-gap: 0; 
+    row-gap: 0;
   }
   .register-btn {
     margin-top: 0;
@@ -146,7 +148,7 @@ Upcoming Events
   .event-cal h4 {
     margin-bottom: 0.4rem;
   }
-  .event-heading{
+  .event-heading {
     top: 54%;
   }
   .register-btn {
@@ -158,14 +160,14 @@ Upcoming Events
 }
 
 @media screen and (min-width: 800px) {
-  body{
+  body {
     line-height: 1.5;
   }
   .event {
     height: 22rem;
     width: 27rem;
   }
-  .event-heading{
+  .event-heading {
     top: 54%;
   }
   .event-cal h4 {
